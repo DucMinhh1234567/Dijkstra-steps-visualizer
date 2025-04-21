@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dijkstra's Algorithm Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.2/dist/vis-network.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-right">
+            <button id="buildBtn">⚒ Build</button>
+            <button id="playBtn">▶ Play</button>
+            <button id="prevBtn">◀</button>
+            <button id="nextBtn">▶</button>
+            <input type="range" id="speedSlider" min="1" max="100" value="50">
+            <span class="step-counter">11/22</span>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="left-panel">
+            <div class="section-title">GraphTracer</div>
+            <div id="graphTracer"></div>
+            
+            <div class="section-title">Array1DTracer</div>
+            <div id="arrayTracer">
+                <div class="array-container">
+                    <div class="array-item">
+                        <span class="array-index">0</span>
+                        <span class="array-value">∞</span>
+                    </div>
+                    <!-- Array items will be dynamically added here -->
+                </div>
+            </div>
+            
+            <div class="section-title">LogTracer</div>
+            <div id="logTracer"></div>
+        </div>
+
+        <div class="resizer" id="dragHandle"></div>
+
+        <div class="right-panel">
+            <div class="code-container">
+                <div class="code-header">
+                    <div class="code-tab active">code.js</div>
+                    <div class="code-tab">README.md</div>
+                </div>
+                <div id="codeTracer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
